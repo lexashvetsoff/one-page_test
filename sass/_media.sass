@@ -1,0 +1,83 @@
+@media ( max-width: 768px )
+    .container
+        max-width: 95%
+    .container-min
+        max-width: 95%
+    .header
+        &-menu
+            display: none
+    .burger-btn
+        display: block
+        position: relative
+        left: 50%
+        transform: translateX(-50%)
+        width: 30px
+        height: 20px
+        cursor: pointer
+        z-index: 3
+        &::before
+            content: ''
+            background-color: $color-primary
+            position: absolute
+            width: 100%
+            height: 2px
+            top: 0
+            left: 0
+            transition: all 0.5s ease 0s
+        &::after
+            content: ''
+            background-color: $color-primary
+            position: absolute
+            width: 100%
+            height: 2px
+            left: 0
+            bottom: 0
+            transition: all 0.5s ease 0s
+        &__item
+            position: absolute
+            background-color: $color-primary
+            top: 9px
+            left: 0
+            width: 100%
+            height: 2px
+            transition: all 0.5s ease 0s
+            &--activ
+                display: none
+        &--activ
+            &::before
+                transform: rotate(45deg)
+                top: 9px
+            &::after
+                transform: rotate(-45deg)
+                bottom: 9px
+    .mobile
+        &--activ
+            top: 85px
+    .info
+        &-experience
+            &__wrapper
+                flex-direction: column
+                align-items: center
+            &__group
+                width: 190px
+        &-js
+            &__img
+                display: none
+    .mr118
+        margin-right: 0
+    .mr91
+        margin-right: 0
+@media ( max-width: 560px )
+    .info
+        &-js
+            &__text
+                font-size: 10px
+@media ( max-width: 450px )
+    .info
+        &-form
+            &__select
+                select
+                    width: 300px
+        &-js
+            &__text
+                font-size: 8px

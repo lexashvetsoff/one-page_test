@@ -1,0 +1,53 @@
+.header
+    padding-top: 35px
+    &-menu
+        &__list
+            display: flex
+            align-items: center
+            justify-content: space-around
+        &__link
+            font-size: 14px
+            line-height: 1.2
+            font-weight: 300
+            color: $color-link
+            &--active
+                color: $color-primary
+    &-line
+        display: block
+        margin-top: 30px
+        width: 100%
+        height: 1px
+        background-color: $color-line
+    &__title
+        text-align: center
+        margin-top: 130px
+        font-size: 70px
+        line-height: 1.2
+        font-weight: 100
+        color: $color-primary
+.burger-btn
+    display: none
+.mobile
+    position: absolute
+    width: 250px
+    padding: 25px 0
+    background-color: $color-primary
+    border-radius: 10px
+    top: -100%
+    left: 50%
+    transform: translateX(-50%)
+    transition: all 0.5s ease 0s
+    z-index: 100
+    &-menu
+        display: flex
+        align-items: center
+        flex-direction: column
+        &__item
+            list-style: none
+            margin-bottom: 20px
+        &__link
+            color: $color-ligth
+            font-size: 14px
+            line-height: 1.2
+            font-weight: 300
+            transition: all 0.5s ease 0s
