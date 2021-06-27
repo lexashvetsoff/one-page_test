@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One-Page Test</title>
+    <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,7 +15,7 @@
                 <span class="burger-btn__item"></span>
             </div>
             <!-- /.burger-btn -->
-
+            
             <div class="header-menu">
                 <ul class="header-menu__list">
                     <li class="header-menu__item">
@@ -205,48 +206,24 @@
                 <h2 class="info-js__title">Уровень владения JavaScript</h2>
 
                 <div class="container">
-                    <div class="info-js__wrapper">
-                        <div class="info-js__item">
-                            <p class="info-js__text">
-                                Не владею
-                            </p>
-                        </div>
-                        <!-- /.info-js__item -->
-
-                        <div class="info-js__item">
-                            <p class="info-js__text">
-                                Использую готовые
-                                <span>решения</span>
-                            </p>
-                        </div>
-                        <!-- /.info-js__item -->
-
-                        <div class="info-js__item">
-                            <p class="info-js__text">
-                                Использую готовые решения
-                                <span>и умею и переделывать</span>
-                            </p>
-                        </div>
-                        <!-- /.info-js__item -->
-
-                        <div class="info-js__item">
-                            <p class="info-js__text">
-                                Пишу сложный JS с нуля
-                            </p>
-                        </div>
-                        <!-- /.info-js__item -->
-
-                        <span class="info-js__img info-js__img--1"></span>
-                        <span class="info-js__img info-js__img--2"></span>
-                        <span class="info-js__img info-js__img--3"></span>
-                        <span class="info-js__img info-js__img--4"></span>
-                    </div>
-                    <!-- /.info-js__wrapper -->
-
-                    <div class="range-wrap">
-                        <input id="range" class="range" type="range" min="0" max="100" value="60" oninput="rangeInput()">
-                    </div>
-                    <!-- /.range-wrap -->
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#" id="item-1" class="nav-item__link">Не владею</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" id="item-2" class="nav-item__link">Использую готовые решения</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" id="item-3" class="nav-item__link">Использую готовые решения и умею и переделывать</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" id="item-4" class="nav-item__link">Пишу сложный JS с нуля</a>
+                        </li>
+                    </ul>
+                    
+                    
+                    <div class="castom" id="polzunok"></div>
+                    <input type="hidden" name="send-result-polzunok" id="send-result-polzunok" />
                 </div>
                 <!-- /.container -->
 
@@ -281,6 +258,8 @@
     <!-- /.info -->
     
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

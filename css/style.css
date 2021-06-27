@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 body {
   margin: 0;
@@ -159,6 +160,7 @@ a {
 .info-form__input {
   width: 100%;
   height: 60px;
+  padding-top: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 1px solid #e5e5e5;
@@ -187,7 +189,7 @@ a {
 }
 
 .info-form__input:not(:placeholder-shown) ~ .info-form__label {
-  top: 8px;
+  top: 5px;
   font-size: 14px;
   line-height: 1.2;
   font-weight: 400;
@@ -196,7 +198,7 @@ a {
 
 .info-form__label {
   position: absolute;
-  top: 20px;
+  top: 15px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -306,6 +308,10 @@ a {
   opacity: 1;
 }
 
+.info-experience__input:not(:checked):hover + .info-experience__lable:before {
+  background-color: #e9efff;
+}
+
 .info-experience__lable {
   padding-left: 32px;
   font-size: 16px;
@@ -349,76 +355,11 @@ a {
 
 .info-js__title {
   margin-top: 30px;
+  margin-bottom: 30px;
   font-size: 30px;
   line-height: 1.2;
   font-weight: 300;
   color: #1c1c1c;
-}
-
-.info-js__wrapper {
-  position: relative;
-  margin-top: 47px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.info-js__item {
-  max-width: 180px;
-}
-
-.info-js__text {
-  text-align: left;
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: 300;
-  color: #2e211c;
-}
-
-.info-js__text span {
-  display: block;
-}
-
-.info-js__img {
-  position: absolute;
-}
-
-.info-js__img--1 {
-  top: 55px;
-  width: 2px;
-  height: 25px;
-  border-left: 2px dotted #ccc;
-}
-
-.info-js__img--2 {
-  top: 55px;
-  -webkit-transform: translateX(3740%);
-          transform: translateX(3740%);
-  width: 2px;
-  height: 19px;
-  border-left: 2px dotted #ccc;
-}
-
-.info-js__img--3 {
-  top: 55px;
-  -webkit-transform: translateX(8900%);
-          transform: translateX(8900%);
-  width: 2px;
-  height: 15px;
-  border-left: 2px dotted #ccc;
-}
-
-.info-js__img--4 {
-  right: 0;
-  width: 2px;
-  height: 10px;
-  border-right: 2px dotted #ccc;
 }
 
 .info-about {
@@ -518,65 +459,113 @@ a {
   margin-top: 97px;
 }
 
-.range-wrap {
+.nav {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-item {
+  position: relative;
+  list-style: none;
+  width: 180px;
+  text-align: left;
+}
+
+.nav-item:nth-child(1) {
+  width: 120px;
+}
+
+.nav-item:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 1px;
   height: 20px;
+  border-left: 1px dotted #ccc;
 }
 
-.range {
-  width: 100%;
-  height: 100%;
-  -webkit-appearance: none;
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-clip-path: polygon(100% 0%, -10% 100%, 100% 30000%);
-          clip-path: polygon(100% 0%, -10% 100%, 100% 30000%);
-  background: -webkit-linear-gradient(left, #435993 0%, #435993 60%, #e9e9e9 60%, #e9e9e9 100%);
+.nav-item:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 1px;
+  height: 18px;
+  border-left: 1px dotted #ccc;
+}
+
+.nav-item:nth-child(3) {
+  margin-left: 25px;
+}
+
+.nav-item:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  top: 38px;
+  left: 3px;
+  width: 1px;
+  height: 13px;
+  border-left: 1px dotted #ccc;
+}
+
+.nav-item:nth-child(4) {
+  text-align: right;
+}
+
+.nav-item:nth-child(4)::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 1px;
+  height: 5px;
+  border-left: 1px dotted #ccc;
+}
+
+.nav-item__link {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 300;
+  color: #2e211c;
+}
+
+/* Изменяем стили ползунка (ручки) */
+.ui-slider .ui-slider-handle {
+  -webkit-transform: translate(-6px, 35px);
+          transform: translate(-6px, 35px);
+  border: none;
   outline: none;
-}
-
-.range::-webkit-slider-thumb {
-  -webkit-appearance: none;
   width: 30px;
   height: 30px;
+  background-color: transparent;
   background-image: url("../image/thumb.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
 }
 
-.range::-moz-range-track {
-  width: 100%;
-  height: 100%;
-  -moz-appearance: none;
-  display: inline-block;
-  vertical-align: middle;
-  clip-path: polygon(100% 0%, -10% 100%, 100% 30000%);
-  background: -moz-linear-gradient(left, #435993 0%, #435993 60%, #1c1c1c 25%, #1c1c1c 100%);
-  outline: none;
+/* Изменяем стили дорожки */
+.ui-slider.ui-slider-horizontal {
+  height: 25px;
+  border: none;
+  background-color: #e9e9e9;
+  -webkit-clip-path: polygon(130% 0%, -10% 100%, 100% 300000%);
+          clip-path: polygon(130% 0%, -10% 100%, 100% 300000%);
 }
 
-.range::-moz-range-thumb {
-  -moz-appearance: none;
-  width: 30px;
-  height: 30px;
-  background-image: url("../image/thumb.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-  transform: translateY(100%);
-}
-
-.range::-ms-thumb {
-  -ms-appearance: none;
-  width: 30px;
-  height: 30px;
-  background-image: url("../image/thumb.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-  transform: translateY(100%);
+.ui-slider .ui-slider-range {
+  background-image: -webkit-gradient(linear, left top, right top, from(#ccb1f1), to(#435993));
+  background-image: linear-gradient(90deg, #ccb1f1 0%, #435993 100%);
 }
 
 @media (max-width: 768px) {
@@ -660,9 +649,6 @@ a {
   .info-experience__group {
     width: 190px;
   }
-  .info-js__img {
-    display: none;
-  }
   .mr118 {
     margin-right: 0;
   }
@@ -671,18 +657,9 @@ a {
   }
 }
 
-@media (max-width: 560px) {
-  .info-js__text {
-    font-size: 10px;
-  }
-}
-
 @media (max-width: 450px) {
   .info-form__select select {
     width: 300px;
-  }
-  .info-js__text {
-    font-size: 8px;
   }
 }
 /*# sourceMappingURL=style.css.map */
