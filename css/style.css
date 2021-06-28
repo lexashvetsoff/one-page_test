@@ -99,13 +99,12 @@ a {
   padding: 25px 0;
   background-color: #1c1c1c;
   border-radius: 10px;
-  top: -100%;
+  top: -1000%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   -webkit-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
-  z-index: 100;
 }
 
 .mobile-menu {
@@ -209,56 +208,6 @@ a {
   color: #c8c8c8;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-}
-
-.info-form__select {
-  position: relative;
-  margin-top: 25px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.info-form__select::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 25%;
-  width: 13px;
-  height: 8px;
-  background: url(../image/arrow_down.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 1;
-}
-
-.info-form__select select {
-  width: 320px;
-  height: 60px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0 83px;
-  background-color: rgba(217, 217, 217, 0);
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  outline: none;
-  border: 1px solid #e5e5e5;
-  border-radius: 5px;
-  font-size: 24px;
-  line-height: 1.2;
-  font-weight: 400;
-  color: #c8c8c8;
-}
-
-.info-form__select select option {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  size: 320px;
-  text-align: center;
 }
 
 .info-experience__title {
@@ -568,6 +517,93 @@ a {
   background-image: linear-gradient(90deg, #ccb1f1 0%, #435993 100%);
 }
 
+.select.active .select__body {
+  display: block;
+}
+
+.select.active .select__icon {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.select {
+  max-width: 320px;
+  margin: 0 auto;
+  margin-top: 25px;
+  position: relative;
+}
+
+.select__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: rgba(217, 217, 217, 0);
+  outline: none;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #c8c8c8;
+  cursor: pointer;
+}
+
+.select__current {
+  margin: 0 auto;
+}
+
+.select__icon {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin-right: 20px;
+}
+
+.select__body {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 300px;
+  overflow-y: scroll;
+  text-align: center;
+  padding: 22px 0;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  border-top: 0;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #435993;
+  z-index: 10;
+}
+
+.select__body::-webkit-scrollbar {
+  width: 4px;
+  background-color: #fff;
+}
+
+.select__body::-webkit-scrollbar-thumb {
+  height: 121px;
+  background-color: #d9d9d9;
+  border-radius: 3px;
+}
+
+.select__item {
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.select__item:hover {
+  background-color: #e5e5e5;
+}
+
 @media (max-width: 768px) {
   .container {
     max-width: 95%;
@@ -575,12 +611,22 @@ a {
   .container-min {
     max-width: 95%;
   }
+  .header-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+    z-index: 100;
+    background: #d9d9d9;
+  }
   .header-menu {
     display: none;
   }
   .burger-btn {
     display: block;
     position: relative;
+    top: 20px;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -635,7 +681,7 @@ a {
     bottom: 9px;
   }
   .mobile--activ {
-    top: 85px;
+    top: 65px;
   }
   .info-experience__wrapper {
     -webkit-box-orient: vertical;
@@ -649,6 +695,12 @@ a {
   .info-experience__group {
     width: 190px;
   }
+  .nav-item::after {
+    display: none;
+  }
+  .nav-item__link {
+    font-size: 10px;
+  }
   .mr118 {
     margin-right: 0;
   }
@@ -657,9 +709,18 @@ a {
   }
 }
 
+@media (max-width: 560px) {
+  .nav-item__link {
+    font-size: 8px;
+  }
+}
+
 @media (max-width: 450px) {
   .info-form__select select {
     width: 300px;
+  }
+  .nav-item__link {
+    font-size: 6px;
   }
 }
 /*# sourceMappingURL=style.css.map */

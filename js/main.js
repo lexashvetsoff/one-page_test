@@ -144,4 +144,26 @@ $(document).ready(function() {
         $('#polzunok').slider("value", item4);       
         $("#send-result-polzunok").val(item4);
     });
+
+    // select
+    var select = function() {
+    var selectHeader = $('.select__header');
+    var selectItem = $('.select__item');
+
+    selectHeader.on("click", selectToggle);
+    selectItem.on("click", selectChoose);
+
+    function selectToggle() {
+        $('.select').toggleClass('active');
+    };
+
+    function selectChoose() {
+        var text = this.innerText;
+
+        $('.select__current').text(text);
+        $('.select').removeClass('active');
+    };
+};
+
+select();
 });

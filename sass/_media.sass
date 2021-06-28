@@ -4,11 +4,20 @@
     .container-min
         max-width: 95%
     .header
+        &-navbar
+            position: fixed
+            top: 0
+            left: 0
+            right: 0
+            height: 65px
+            z-index: 100
+            background: $color-line
         &-menu
             display: none
     .burger-btn
         display: block
         position: relative
+        top: 20px
         left: 50%
         transform: translateX(-50%)
         width: 30px
@@ -52,7 +61,7 @@
                 bottom: 9px
     .mobile
         &--activ
-            top: 85px
+            top: 65px
     .info
         &-experience
             &__wrapper
@@ -60,18 +69,28 @@
                 align-items: center
             &__group
                 width: 190px
+    .nav
+        &-item
+            &::after
+                display: none
+            &__link
+                font-size: 10px
     .mr118
         margin-right: 0
     .mr91
         margin-right: 0
-// @media ( max-width: 560px )
-//     .info
-//         &-js
-//             &__text
-//                 font-size: 10px
+@media ( max-width: 560px )
+    .nav
+        &-item
+            &__link
+                font-size: 8px
 @media ( max-width: 450px )
     .info
         &-form
             &__select
                 select
                     width: 300px
+    .nav
+        &-item
+            &__link
+                font-size: 6px

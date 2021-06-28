@@ -11,47 +11,50 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="burger-btn">
-                <span class="burger-btn__item"></span>
-            </div>
-            <!-- /.burger-btn -->
-            
-            <div class="header-menu">
-                <ul class="header-menu__list">
-                    <li class="header-menu__item">
-                        <a id="btn-info" href="#info" class="header-menu__link header-menu__link--active">Личная информация</a>
-                    </li>
-                    <li class="header-menu__item">
-                        <a id="btn-experience" href="#experience" class="header-menu__link">Опыт</a>
-                    </li>
-                    <li class="header-menu__item">
-                        <a id="btn-js" href="#js" class="header-menu__link">JavaScript</a>
-                    </li>
-                    <li class="header-menu__item">
-                        <a id="btn-about" href="#about" class="header-menu__link">О себе</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.header-menu -->
-
-            <div class="mobile">
-                <ul class="mobile-menu">
-                    <li class="mobile-menu__item">
-                        <a id="mob-info" href="#info" class="mobile-menu__link">Личная информация</a>
-                    </li>
-                    <li class="mobile-menu__item">
-                        <a id="mob-experience" href="#experience" class="mobile-menu__link">Опыт</a>
-                    </li>
-                    <li class="mobile-menu__item">
-                        <a id="mob-js" href="#js" class="mobile-menu__link">JavaScript</a>
-                    </li>
-                    <li class="mobile-menu__item">
-                        <a id="mob-about" href="#about" class="mobile-menu__link">О себе</a>
-                    </li>
-                </ul>
-                <!-- /.mobile-menu -->
-            </div>
-            <!-- /.mobile -->
+            <nav class="header-navbar">
+                <div class="burger-btn">
+                    <span class="burger-btn__item"></span>
+                </div>
+                <!-- /.burger-btn -->
+                
+                <div class="header-menu">
+                    <ul class="header-menu__list">
+                        <li class="header-menu__item">
+                            <a id="btn-info" href="#info" class="header-menu__link header-menu__link--active">Личная информация</a>
+                        </li>
+                        <li class="header-menu__item">
+                            <a id="btn-experience" href="#experience" class="header-menu__link">Опыт</a>
+                        </li>
+                        <li class="header-menu__item">
+                            <a id="btn-js" href="#js" class="header-menu__link">JavaScript</a>
+                        </li>
+                        <li class="header-menu__item">
+                            <a id="btn-about" href="#about" class="header-menu__link">О себе</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.header-menu -->
+                
+                <div class="mobile">
+                    <ul class="mobile-menu">
+                        <li class="mobile-menu__item">
+                            <a id="mob-info" href="#info" class="mobile-menu__link">Личная информация</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a id="mob-experience" href="#experience" class="mobile-menu__link">Опыт</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a id="mob-js" href="#js" class="mobile-menu__link">JavaScript</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a id="mob-about" href="#about" class="mobile-menu__link">О себе</a>
+                        </li>
+                    </ul>
+                    <!-- /.mobile-menu -->
+                </div>
+                <!-- /.mobile -->
+            </nav>
+            <!-- /.header-navbar -->
         </div>
         <!-- /.container -->
         <span class="header-line"></span>
@@ -77,27 +80,55 @@
                     </div>
                     <!-- /.infoform-group -->
                     
-                    <div class="info-form__select">
-                        <select>
-                            <option value="0">Год рождения</option>
-                            <option value="1">1998</option>
-                            <option value="2">1997</option>
-                            <option value="3">1996</option>
-                            <option value="4">1995</option>
-                            <option value="5">1994</option>
-                            <option value="6">1993</option>
-                            <option value="7">1992</option>
-                            <option value="8">1991</option>
-                            <option value="9">1990</option>
-                            <option value="10">1989</option>
-                            <option value="11">1988</option>
-                            <option selected value="12">1987</option>
-                            <option value="13">1986</option>
-                            <option value="14">1985</option>
-                            <option value="15">1984</option>
-                        </select>
+                    <div class="select">
+                        <div class="select__header">
+                            <span class="select__current">1987</span>
+                    
+                            <svg class="select__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="16px" height="11px" viewBox="0 0 16 11">
+                                <path fill-rule="evenodd" fill="#435993"
+                                    d="M14.762573,3.234375 C14.762573,3.234375 9.616699,8.379578 9.616699,8.379578 C9.616699,8.379578 9.764709,8.527527 9.764709,8.527527 C9.764709,8.527527 8.424438,9.867737 8.424438,9.867737 C8.424438,9.867737 8.276367,9.719666 8.276367,9.719666 C8.276367,9.719666 8.128357,9.867737 8.128357,9.867737 C8.128357,9.867737 6.788086,8.527527 6.788086,8.527527 C6.788086,8.527527 6.936096,8.379578 6.936096,8.379578 C6.936096,8.379578 1.7902222,3.234375 1.7902222,3.234375 C1.7902222,3.234375 3.1304932,1.8942871 3.1304932,1.8942871 C3.1304932,1.8942871 8.276367,7.0394897 8.276367,7.0394897 C8.276367,7.0394897 13.422302,1.8942871 13.422302,1.8942871 C13.422302,1.8942871 14.762573,3.234375 14.762573,3.234375 Z" />
+                            </svg>
+                        </div>
+                        <!-- /.select__header -->
+                    
+                        <div class="select__body">
+                            <div class="select__item">Год рождения</div>
+                            <!-- /.select__item -->
+                            <div class="select__item">1998</div>
+                            <!-- /.select__item -->
+                            <div class="select__item">1997</div>
+                            <!-- /.select__item -->
+                            <div class="select__item">1996</div>
+                            <!-- /.select__item -->
+                            <div class="select__item">1995</div>
+                            <!-- /.select__item -->
+                            <div class="select__item">1994</div>
+                            <!-- /.select__item -->
+                            <div class="select__item">1993</div>
+                            <!-- /.select__item -->
+                            <div class="select__item">1992</div>
+                            <!-- /.select__item -->
+                            <div class="select__item">1991</div>
+                            <!-- /.select__item -->
+                            <div class="select__item">1990</div>
+                            <!-- /.select__item -->
+                            <div class="select__item">1989</div>
+                            <!-- /.select__item -->
+                            <div class="select__item">1988</div>
+                            <!-- /.select__item -->
+                            <div class="select__item">1987</div>
+                            <!-- /.select__item -->
+                            <div class="select__item">1986</div>
+                            <!-- /.select__item -->
+                            <div class="select__item">1985</div>
+                            <!-- /.select__item -->
+                            <div class="select__item">1984</div>
+                            <!-- /.select__item -->
+                        </div>
+                        <!-- /.select__body -->
                     </div>
-                    <!-- /.info-form__select -->
+                    <!-- /.select -->
                     
                     <div class="info-form__group">
                         <input type="text" class="info-form__input" placeholder=" " value="Усть-Баргузин">
